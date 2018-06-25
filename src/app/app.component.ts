@@ -9,7 +9,8 @@ import { DataService } from './data.service'
 })
 export class AppComponent implements OnInit {
   title = 'app';
-
+  user = 0;
+  AnswerComponentComponent;
   questionInfo;
 
   constructor(private DataService: DataService){}
@@ -19,10 +20,10 @@ export class AppComponent implements OnInit {
       .subscribe(
         questionInfo => {
           this.questionInfo = questionInfo[0];
+          console.log(questionInfo)
         }
       )
   }
-
   ngOnInit(){
     this.getQuestionInfo()
   }

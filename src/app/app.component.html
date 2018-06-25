@@ -6,3 +6,8 @@
 </div>
 
 <b>The Question:</b> {{questionInfo?.question}} <br>
+<b>The Category:</b> {{questionInfo?.category.title}} <br>
+<b>The Points:</b> {{questionInfo?.value}} <br>
+
+<app-answer-component #child [questionInfo]="questionInfo"></app-answer-component>
+
